@@ -2,7 +2,7 @@ const express = require("express");
 const { connectToMongoDB } = require("./connect");
 const urlRoute = require("./routes/url");
 const URL = require("./models/url");
-const userRoutes = require('./routes/user');
+//const userRoutes = require('./routes/user');
 const cors = require('cors');
 
 
@@ -35,6 +35,6 @@ app.get("/:shortId", async (req, res) => {
   res.redirect(entry.redirectURL);
 });
 
-app.use('/api/users', userRoutes);
+//app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
